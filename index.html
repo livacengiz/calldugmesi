@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call Düğmesi</title>
+    <style>
+      body {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .hint {
+        display: none;
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <button onmouseover="call('dugmesi')" onmouseleave="call('boregi')">
+      düğme
+    </button>
+    <button onmouseover="call('dugmesi')" onmouseleave="call('boregi')">
+      düğme
+    </button>
+    <span class="hint"
+      >Çalışmazsa oraya buraya tıklayıp öyle dene. Çünkü kullandığın şey
+      tarayıcı. <br />bir sürü özellikleri var. sen etkileşime geçmeden
+      birşeyler yaptırtmıyor. hepsi senin iyiliğin için</span
+    >
+    <script src="index.js"></script>
+  </body>
+</html>
