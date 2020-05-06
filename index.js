@@ -1,5 +1,7 @@
 const audio = new Audio("button.mp3");
 audio.muted = true;
+audio.addEventListener("timeupdate", fetchTime);
+
 function call(param) {
 	if (param === "dugmesi") {
 		audio.muted = false;
@@ -15,6 +17,18 @@ function call(param) {
 	if (!param) {
 		// param yoksa
 		console.log("param yok");
+	}
+}
+
+function fetchTime(e) {
+	var seconds = ((e.timeStamp % 60000) / 1000).toFixed(0);
+	if (seconds === "55") {
+		dugmes = document.getElementsByTagName("button"); // button. WTF 🐏💨
+		for (let i = 0; i < dugmes.length; i++) {
+			dugmes[i].style.position = "absolute";
+			dugmes[i].style.left = "48.5%";
+		}
+
 	}
 }
 
